@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gestión de Reservas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-datos-cliente [(nombre)]="reserva.nombre" [(contacto)]="reserva.contacto"></app-datos-cliente>
+  <app-fecha-hora [(fecha)]="reserva.fecha" [(hora)]="reserva.hora"></app-fecha-hora>
+  <app-seleccion-mesa [(mesa)]="reserva.mesa"></app-seleccion-mesa>
+
+  <ion-button expand="block" (click)="guardar()">Guardar Reserva</ion-button>
+
+  <ion-card *ngFor="let r of reservasGuardadas">
+    <ion-card-header>
+      <ion-card-title>{{ r.nombre }}</ion-card-title>
+      <ion-card-subtitle>{{ r.fecha }} - {{ r.hora }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Mesa asignada: <strong>{{ r.mesa }}</strong></p>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>
