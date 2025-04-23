@@ -1,0 +1,25 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Fecha y Hora</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item lines="full">
+      <ion-label position="stacked">Fecha</ion-label>
+      <ion-datetime
+        presentation="date"
+        [(ngModel)]="fecha"
+        (ionChange)="onFechaChange()">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item lines="full" class="hora-item">
+      <ion-label position="stacked">Hora</ion-label>
+      <ion-datetime
+        presentation="time"
+        [(ngModel)]="hora"
+        (ionChange)="onHoraChange()"
+        prefer-wheel="true">
+      </ion-datetime>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
