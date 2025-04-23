@@ -1,0 +1,52 @@
+ion-header {
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    color: white;
+  }
+
+  ion-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+}
+
+ion-content {
+  ion-button {
+    margin: 20px 0;
+    --background: var(--ion-color-primary);
+    --border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  ion-card {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+  
+  ion-card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+  }
+  
+  ion-card-subtitle {
+    font-size: 0.85rem;
+    color: var(--ion-color-medium);
+  }
+  
+  ion-card-content p {
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+  
+}
